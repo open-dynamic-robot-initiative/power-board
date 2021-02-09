@@ -54,7 +54,7 @@ Wire Wire Line
 Wire Wire Line
 	5300 1800 4650 1800
 Wire Wire Line
-	5700 1800 6750 1800
+	5700 1800 6250 1800
 Wire Wire Line
 	5400 2900 5700 2900
 Wire Wire Line
@@ -333,5 +333,45 @@ F 2 "" H 4650 1700 50  0001 C CNN
 F 3 "" H 4650 1700 50  0001 C CNN
 	1    4650 1700
 	0    -1   -1   0   
+$EndComp
+$Comp
+L Regulator_Switching:MAX17501BxTB U1
+U 1 1 6021AD98
+P 7150 2650
+F 0 "U1" H 7150 3117 50  0000 C CNN
+F 1 "MAX17501BxTB" H 7150 3026 50  0000 C CNN
+F 2 "Package_DFN_QFN:TDFN-10-1EP_2x3mm_P0.5mm_EP0.9x2mm" H 7150 2050 50  0001 C CNN
+F 3 "https://datasheets.maximintegrated.com/en/ds/MAX17501.pdf" H 5800 3700 50  0001 C CNN
+	1    7150 2650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6650 2450 6250 2450
+Wire Wire Line
+	6250 2450 6250 1800
+Connection ~ 6250 1800
+Wire Wire Line
+	6250 1800 6750 1800
+$Comp
+L power:GND #PWR?
+U 1 1 60225B13
+P 7050 3050
+F 0 "#PWR?" H 7050 2800 50  0001 C CNN
+F 1 "GND" H 7055 2877 50  0000 C CNN
+F 2 "" H 7050 3050 50  0001 C CNN
+F 3 "" H 7050 3050 50  0001 C CNN
+	1    7050 3050
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 602273C7
+P 7150 3050
+F 0 "#PWR?" H 7150 2800 50  0001 C CNN
+F 1 "GND" H 7155 2877 50  0000 C CNN
+F 2 "" H 7150 3050 50  0001 C CNN
+F 3 "" H 7150 3050 50  0001 C CNN
+	1    7150 3050
+	1    0    0    -1  
 $EndComp
 $EndSCHEMATC
