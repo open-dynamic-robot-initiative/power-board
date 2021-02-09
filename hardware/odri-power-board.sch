@@ -4,11 +4,11 @@ EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
-Title ""
+Title "ODRI Power Board"
 Date ""
 Rev ""
-Comp ""
-Comment1 ""
+Comp "LAAS-CNRS"
+Comment1 "Thomas Flayols"
 Comment2 ""
 Comment3 ""
 Comment4 ""
@@ -42,44 +42,22 @@ Wire Wire Line
 Wire Wire Line
 	5700 2900 5700 1850
 $Comp
-L Device:C C1
-U 1 1 601A36E5
-P 5750 3150
-F 0 "C1" H 5865 3196 50  0000 L CNN
-F 1 "C" H 5865 3105 50  0000 L CNN
-F 2 "Capacitor_SMD:C_01005_0402Metric" H 5788 3000 50  0001 C CNN
-F 3 "~" H 5750 3150 50  0001 C CNN
-	1    5750 3150
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR0101
-U 1 1 601A52F7
-P 5750 3300
-F 0 "#PWR0101" H 5750 3050 50  0001 C CNN
-F 1 "GND" H 5755 3127 50  0000 C CNN
-F 2 "" H 5750 3300 50  0001 C CNN
-F 3 "" H 5750 3300 50  0001 C CNN
-	1    5750 3300
-	1    0    0    -1  
-$EndComp
-$Comp
 L power:GND #PWR0102
 U 1 1 601A5AA2
-P 5550 3300
-F 0 "#PWR0102" H 5550 3050 50  0001 C CNN
-F 1 "GND" H 5555 3127 50  0000 C CNN
-F 2 "" H 5550 3300 50  0001 C CNN
-F 3 "" H 5550 3300 50  0001 C CNN
-	1    5550 3300
-	1    0    0    -1  
+P 5750 3000
+F 0 "#PWR0102" H 5750 2750 50  0001 C CNN
+F 1 "GND" H 5755 2827 50  0000 C CNN
+F 2 "" H 5750 3000 50  0001 C CNN
+F 3 "" H 5750 3000 50  0001 C CNN
+	1    5750 3000
+	0    -1   -1   0   
 $EndComp
 Wire Wire Line
 	5150 3000 5750 3000
 Wire Wire Line
-	5150 3100 5550 3100
+	5150 3100 5300 3100
 Wire Wire Line
-	5550 3100 5550 3300
+	5300 3100 5300 3300
 $Comp
 L Connector:Conn_01x02_Male J2
 U 1 1 601AD274
@@ -533,13 +511,13 @@ F 3 "~" H 1850 3750 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	1850 3600 1850 3150
+	1850 3600 1850 3450
 Wire Wire Line
-	3500 4150 2650 4150
+	3500 4150 3450 4150
 Wire Wire Line
-	2650 4150 2650 3150
+	3450 4150 3450 3450
 Wire Wire Line
-	2650 3150 1850 3150
+	3450 3450 1850 3450
 $Comp
 L Regulator_Linear:MCP1700-3302E_SOT23 U4
 U 1 1 602EBB88
@@ -577,9 +555,9 @@ Wire Wire Line
 	9400 3650 9300 3650
 Connection ~ 9400 3650
 Wire Wire Line
-	8950 3650 9300 3650
+	9300 3200 9300 3650
 Connection ~ 9300 3650
-Text Label 8950 3650 0    50   ~ 0
+Text Label 9300 3200 0    50   ~ 0
 3V3
 Wire Wire Line
 	5700 1850 6750 1850
@@ -594,7 +572,7 @@ F 3 "~" H 1150 1900 50  0001 C CNN
 	1    1150 1900
 	-1   0    0    1   
 $EndComp
-Connection ~ 1850 3150
+Connection ~ 1850 3450
 Connection ~ 4450 1850
 Connection ~ 5700 1850
 Wire Wire Line
@@ -611,7 +589,7 @@ Connection ~ 3450 1800
 Wire Wire Line
 	3450 1800 3450 1850
 Wire Wire Line
-	1850 1800 1850 3150
+	1850 1800 1850 2200
 Connection ~ 1850 1800
 Wire Wire Line
 	1850 1800 3450 1800
@@ -687,4 +665,90 @@ Wire Wire Line
 Wire Wire Line
 	1850 3900 1850 4100
 Connection ~ 1850 4100
+$Comp
+L Device:Fuse F1
+U 1 1 603F565B
+P 1850 2350
+F 0 "F1" H 1910 2396 50  0000 L CNN
+F 1 "Fuse" H 1910 2305 50  0000 L CNN
+F 2 "Fuse:Fuse_0603_1608Metric" V 1780 2350 50  0001 C CNN
+F 3 "~" H 1850 2350 50  0001 C CNN
+	1    1850 2350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1850 2500 1850 3450
+$Comp
+L Device:C C1
+U 1 1 604019BE
+P 5750 3150
+F 0 "C1" H 5865 3196 50  0000 L CNN
+F 1 "C" H 5865 3105 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0402_1005Metric" H 5788 3000 50  0001 C CNN
+F 3 "~" H 5750 3150 50  0001 C CNN
+	1    5750 3150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C3
+U 1 1 60402277
+P 10200 3350
+F 0 "C3" H 10315 3396 50  0000 L CNN
+F 1 "C" H 10315 3305 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0402_1005Metric" H 10238 3200 50  0001 C CNN
+F 3 "~" H 10200 3350 50  0001 C CNN
+	1    10200 3350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C2
+U 1 1 60402F27
+P 9900 3350
+F 0 "C2" H 10015 3396 50  0000 L CNN
+F 1 "C" H 10015 3305 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0402_1005Metric" H 9938 3200 50  0001 C CNN
+F 3 "~" H 9900 3350 50  0001 C CNN
+	1    9900 3350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9300 3200 9900 3200
+Wire Wire Line
+	9900 3200 10200 3200
+Connection ~ 9900 3200
+$Comp
+L power:GND #PWR0101
+U 1 1 6040FA2F
+P 9900 3500
+F 0 "#PWR0101" H 9900 3250 50  0001 C CNN
+F 1 "GND" H 9905 3327 50  0000 C CNN
+F 2 "" H 9900 3500 50  0001 C CNN
+F 3 "" H 9900 3500 50  0001 C CNN
+	1    9900 3500
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0118
+U 1 1 60410101
+P 10200 3500
+F 0 "#PWR0118" H 10200 3250 50  0001 C CNN
+F 1 "GND" H 10205 3327 50  0000 C CNN
+F 2 "" H 10200 3500 50  0001 C CNN
+F 3 "" H 10200 3500 50  0001 C CNN
+	1    10200 3500
+	1    0    0    -1  
+$EndComp
+Text Label 4650 4350 0    50   ~ 0
+5V
+Connection ~ 5750 3000
+Wire Wire Line
+	5300 3300 5750 3300
+Text Label 5400 3300 0    50   ~ 0
+5V
+Wire Wire Line
+	4900 1750 4900 1000
+Wire Wire Line
+	4900 1000 5300 1000
+Wire Wire Line
+	4450 1750 4900 1750
 $EndSCHEMATC
