@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP INA2290EVM
+D Texas Instruments INA2290 120-V common-mode, ultra-precise current sense amplifier evaluation module
+K
+F https://www.ti.com/lit/gpn/ina2290
+$ENDCMP
+#
+#End Doc Library

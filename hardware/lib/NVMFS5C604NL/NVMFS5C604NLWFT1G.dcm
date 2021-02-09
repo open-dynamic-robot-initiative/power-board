@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP NVMFS5C604NLWFT1G
+D MOSFET NFET SO8FL 60V 287A 1.2MO
+K
+F https://componentsearchengine.com/Datasheets/1/NVMFS5C604NLWFT1G.pdf
+$ENDCMP
+#
+#End Doc Library
