@@ -1,0 +1,4 @@
+(sym_lib_table
+  (lib (name INA2290EVM)(type Legacy)(uri ${KIPRJMOD}/lib/INA2290EVM/INA2290EVM.lib)(options "")(descr ""))
+  (lib (name NVMFS5C604NLWFT1G)(type Legacy)(uri ${KIPRJMOD}/lib/NVMFS5C604NL/NVMFS5C604NLWFT1G.lib)(options "")(descr ""))
+)
