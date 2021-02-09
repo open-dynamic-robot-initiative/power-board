@@ -1,3 +1,4 @@
 (fp_lib_table
   (lib (name NVMFS5C604NLWFT1G)(type Legacy)(uri ${KIPRJMOD}/lib/NVMFS5C604NL/NVMFS5C604NLWFT1G.mod)(options "")(descr ""))
+  (lib (name LTC7001)(type KiCad)(uri ${KIPRJMOD}/lib/LTC7001)(options "")(descr ""))
 )

@@ -1,4 +1,5 @@
 (sym_lib_table
   (lib (name NVMFS5C604NLWFT1G)(type Legacy)(uri ${KIPRJMOD}/lib/NVMFS5C604NL/NVMFS5C604NLWFT1G.lib)(options "")(descr ""))
   (lib (name ina229)(type Legacy)(uri ${KIPRJMOD}/lib/ina229/ina229.lib)(options "")(descr ""))
+  (lib (name LTC7001IMSE#PBF)(type Legacy)(uri ${KIPRJMOD}/lib/LTC7001/LTC7001IMSE#PBF.lib)(options "")(descr ""))
 )

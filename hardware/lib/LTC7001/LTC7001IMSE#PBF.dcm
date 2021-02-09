@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP LTC7001IMSE#PBF
+D High-Side Gate Driver IC Non-Inverting 10-MSOP
+K
+F http://www.linear.com/docs/58157
+$ENDCMP
+#
+#End Doc Library

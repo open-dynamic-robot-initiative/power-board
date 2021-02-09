@@ -751,4 +751,23 @@ Wire Wire Line
 	4900 1000 5300 1000
 Wire Wire Line
 	4450 1750 4900 1750
+$Comp
+L LTC7001IMSE#PBF:LTC7001IMSE#PBF IC1
+U 1 1 6022DE63
+P 2850 6250
+F 0 "IC1" H 3450 6515 50  0000 C CNN
+F 1 "LTC7001IMSE#PBF" H 3450 6424 50  0000 C CNN
+F 2 "SOP50P490X110-11N" H 3900 6350 50  0001 L CNN
+F 3 "http://www.linear.com/docs/58157" H 3900 6250 50  0001 L CNN
+F 4 "High-Side Gate Driver IC Non-Inverting 10-MSOP" H 3900 6150 50  0001 L CNN "Description"
+F 5 "1.1" H 3900 6050 50  0001 L CNN "Height"
+F 6 "Linear Technology" H 3900 5950 50  0001 L CNN "Manufacturer_Name"
+F 7 "LTC7001IMSE#PBF" H 3900 5850 50  0001 L CNN "Manufacturer_Part_Number"
+F 8 "584-LTC7001IMSEPBF" H 3900 5750 50  0001 L CNN "Mouser Part Number"
+F 9 "https://www.mouser.co.uk/ProductDetail/Analog-Devices-Linear-Technology/LTC7001IMSEPBF?qs=BZBei1rCqCCuiLQ%252BeMjtcQ%3D%3D" H 3900 5650 50  0001 L CNN "Mouser Price/Stock"
+F 10 "LTC7001IMSE#PBF" H 3900 5550 50  0001 L CNN "Arrow Part Number"
+F 11 "https://www.arrow.com/en/products/ltc7001imsepbf/linear-technology" H 3900 5450 50  0001 L CNN "Arrow Price/Stock"
+	1    2850 6250
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
