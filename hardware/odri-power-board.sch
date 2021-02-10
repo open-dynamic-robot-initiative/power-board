@@ -860,11 +860,11 @@ Connection ~ 4250 2500
 Text Notes 1750 3300 0    50   ~ 0
 High side mosfet driver with inrush current protection
 Text Notes 3500 7600 0    50   ~ 0
-DC 5-60V to 5V - 500ma
+DC 6-60V to 5V - 500mA
 Text Notes 900  7350 0    50   ~ 0
-Power up and latch
+Power ON and latch
 Text Notes 5450 7150 0    50   ~ 0
-DC 5V to 3.3V 250ma
+DC 5V to 3.3V 250mA
 Text Notes 4000 5850 0    50   ~ 0
 Current and Voltage mesurment
 Wire Wire Line
@@ -983,7 +983,7 @@ F 3 "" H 6800 2200 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Text Notes 5800 2250 0    50   ~ 0
-Reset (=Power STOP)
+Reset and Power OFF
 $Comp
 L Connector_Generic:Conn_01x02 J12
 U 1 1 60589796
