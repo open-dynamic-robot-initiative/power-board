@@ -1335,4 +1335,45 @@ Wire Wire Line
 	10100 2700 9850 2700
 Text Label 9850 2700 0    50   ~ 0
 3V3
+$Comp
+L Oscillator:ASE-xxxMHz X1
+U 1 1 60535970
+P 6350 3150
+F 0 "X1" H 6694 3196 50  0000 L CNN
+F 1 "ASE-xxxMHz" H 6694 3105 50  0000 L CNN
+F 2 "Oscillator:Oscillator_SMD_Abracon_ASE-4Pin_3.2x2.5mm" H 7050 2800 50  0001 C CNN
+F 3 "http://www.abracon.com/Oscillators/ASV.pdf" H 6250 3150 50  0001 C CNN
+	1    6350 3150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7350 2100 7050 2100
+Wire Wire Line
+	7050 2100 7050 3150
+Wire Wire Line
+	7050 3150 6650 3150
+Wire Wire Line
+	6350 2850 6350 2750
+Wire Wire Line
+	6050 3150 5950 3150
+Wire Wire Line
+	5950 3150 5950 2750
+Wire Wire Line
+	5950 2750 6350 2750
+Wire Wire Line
+	6350 2750 6500 2750
+Connection ~ 6350 2750
+Text Label 6500 2750 0    50   ~ 0
+3V3
+$Comp
+L power:GND #PWR0133
+U 1 1 60562009
+P 6350 3450
+F 0 "#PWR0133" H 6350 3200 50  0001 C CNN
+F 1 "GND" H 6355 3277 50  0000 C CNN
+F 2 "" H 6350 3450 50  0001 C CNN
+F 3 "" H 6350 3450 50  0001 C CNN
+	1    6350 3450
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
