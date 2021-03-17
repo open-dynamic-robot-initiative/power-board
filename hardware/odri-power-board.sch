@@ -312,17 +312,6 @@ Wire Wire Line
 Wire Wire Line
 	2650 4450 2650 5300
 $Comp
-L MCU_ST_STM32F1:STM32F103T8Ux U2
-U 1 1 6022A81A
-P 8050 2400
-F 0 "U2" H 8000 3481 50  0000 C CNN
-F 1 "STM32F103T8Ux" H 8000 3390 50  0000 C CNN
-F 2 "Package_DFN_QFN:QFN-36-1EP_6x6mm_P0.5mm_EP4.1x4.1mm" H 7450 1500 50  0001 R CNN
-F 3 "http://www.st.com/st-web-ui/static/active/en/resource/technical/document/datasheet/CD00161566.pdf" H 8050 2400 50  0001 C CNN
-	1    8050 2400
-	1    0    0    -1  
-$EndComp
-$Comp
 L Connector_Generic:Conn_01x05 J10
 U 1 1 60247860
 P 10550 4150
@@ -362,50 +351,6 @@ Text Label 10100 4250 0    50   ~ 0
 CS_1
 Text Label 10100 4350 0    50   ~ 0
 MOSI_1
-Text Label 8800 2100 0    50   ~ 0
-CS_1
-Wire Wire Line
-	8650 2100 9000 2100
-Wire Wire Line
-	8650 2000 8800 2000
-Wire Wire Line
-	8650 1900 8800 1900
-Wire Wire Line
-	8650 2200 9000 2200
-Wire Wire Line
-	8650 2300 9000 2300
-Text Label 8800 2200 0    50   ~ 0
-CLK_1
-Text Label 8800 2300 0    50   ~ 0
-MISO_1
-Wire Wire Line
-	8650 2400 9000 2400
-Text Label 8800 2400 0    50   ~ 0
-MOSI_1
-Wire Wire Line
-	8250 3400 8150 3400
-Wire Wire Line
-	8150 3400 8050 3400
-Connection ~ 8150 3400
-Wire Wire Line
-	8050 3400 7950 3400
-Connection ~ 8050 3400
-Wire Wire Line
-	7950 3400 7850 3400
-Connection ~ 7950 3400
-Wire Wire Line
-	7950 3400 7950 3500
-$Comp
-L power:GND #PWR0115
-U 1 1 6027DAFF
-P 7950 3500
-F 0 "#PWR0115" H 7950 3250 50  0001 C CNN
-F 1 "GND" H 7955 3327 50  0000 C CNN
-F 2 "" H 7950 3500 50  0001 C CNN
-F 3 "" H 7950 3500 50  0001 C CNN
-	1    7950 3500
-	1    0    0    -1  
-$EndComp
 $Comp
 L NVMFS5C604NLWFT1G:NVMFS5C604NLWFT1G Q1
 U 1 1 60287D65
@@ -528,17 +473,6 @@ Wire Wire Line
 	6250 6850 6350 6850
 Text Label 6350 6850 0    50   ~ 0
 3V3
-Wire Wire Line
-	8150 1500 8050 1500
-Wire Wire Line
-	7950 1500 8050 1500
-Connection ~ 8050 1500
-Wire Wire Line
-	7950 1500 7850 1500
-Connection ~ 7950 1500
-Wire Wire Line
-	7850 1050 7850 1500
-Connection ~ 7850 1500
 Text Label 7850 1050 0    50   ~ 0
 3V3
 Wire Wire Line
@@ -576,10 +510,6 @@ Text Label 1200 7050 0    50   ~ 0
 DC_ENA
 Text Notes 3750 6300 0    50   ~ 0
 TODO WIRE MAX\n
-Wire Wire Line
-	8650 1700 9000 1700
-Text Label 8800 1700 0    50   ~ 0
-DC_ENA
 $Comp
 L Device:D D1
 U 1 1 6039FA1D
@@ -591,22 +521,6 @@ F 3 "~" H 1600 7050 50  0001 C CNN
 	1    1600 7050
 	-1   0    0    1   
 $EndComp
-Wire Wire Line
-	8650 2900 9000 2900
-Wire Wire Line
-	8650 3000 9000 3000
-Wire Wire Line
-	8650 3100 9000 3100
-Wire Wire Line
-	8650 3200 9000 3200
-Text Label 8800 2900 0    50   ~ 0
-CS_2
-Text Label 8800 3000 0    50   ~ 0
-CLK_2
-Text Label 8800 3100 0    50   ~ 0
-MISO_2
-Text Label 8800 3200 0    50   ~ 0
-MOSI_2
 Text Label 4300 5200 0    50   ~ 0
 CS_2
 Text Label 4300 5300 0    50   ~ 0
@@ -642,7 +556,7 @@ U 1 1 603F565B
 P 1900 4850
 F 0 "F1" H 1960 4896 50  0000 L CNN
 F 1 "Fuse" H 1960 4805 50  0000 L CNN
-F 2 "Fuse:Fuse_0603_1608Metric" V 1830 4850 50  0001 C CNN
+F 2 "Fuse:Fuse_1206_3216Metric" V 1830 4850 50  0001 C CNN
 F 3 "~" H 1900 4850 50  0001 C CNN
 	1    1900 4850
 	1    0    0    -1  
@@ -683,8 +597,6 @@ F 3 "~" H 8450 1200 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	7850 1050 8450 1050
-Wire Wire Line
 	8450 1050 8750 1050
 Connection ~ 8450 1050
 $Comp
@@ -718,25 +630,6 @@ Text Label 2850 5800 2    50   ~ 0
 5V
 Wire Wire Line
 	4500 4250 4550 4250
-$Comp
-L LTC7001IMSE#PBF:LTC7001IMSE#PBF IC1
-U 1 1 6022DE63
-P 2500 2200
-F 0 "IC1" H 3100 2465 50  0000 C CNN
-F 1 "LTC7001IMSE#PBF" H 3100 2374 50  0000 C CNN
-F 2 "LTC7001:SOP50P490X110-11N" H 3550 2300 50  0001 L CNN
-F 3 "http://www.linear.com/docs/58157" H 3550 2200 50  0001 L CNN
-F 4 "High-Side Gate Driver IC Non-Inverting 10-MSOP" H 3550 2100 50  0001 L CNN "Description"
-F 5 "1.1" H 3550 2000 50  0001 L CNN "Height"
-F 6 "Linear Technology" H 3550 1900 50  0001 L CNN "Manufacturer_Name"
-F 7 "LTC7001IMSE#PBF" H 3550 1800 50  0001 L CNN "Manufacturer_Part_Number"
-F 8 "584-LTC7001IMSEPBF" H 3550 1700 50  0001 L CNN "Mouser Part Number"
-F 9 "https://www.mouser.co.uk/ProductDetail/Analog-Devices-Linear-Technology/LTC7001IMSEPBF?qs=BZBei1rCqCCuiLQ%252BeMjtcQ%3D%3D" H 3550 1600 50  0001 L CNN "Mouser Price/Stock"
-F 10 "LTC7001IMSE#PBF" H 3550 1500 50  0001 L CNN "Arrow Part Number"
-F 11 "https://www.arrow.com/en/products/ltc7001imsepbf/linear-technology" H 3550 1400 50  0001 L CNN "Arrow Price/Stock"
-	1    2500 2200
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	2500 2300 2250 2300
 Wire Wire Line
@@ -843,10 +736,6 @@ Text Notes 4000 5850 0    50   ~ 0
 Current and Voltage mesurment
 Text Label 1350 2500 0    50   ~ 0
 POWER_ENA
-Wire Wire Line
-	8650 1800 9000 1800
-Text Label 8800 1800 0    50   ~ 0
-POWER_ENA
 Text Notes 9950 4500 0    50   ~ 0
 SPI Interface
 Wire Wire Line
@@ -884,8 +773,6 @@ F 3 "~" H 4700 4250 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	4850 4250 4900 4250
-Text Notes 7350 3500 0    50   ~ 0
-MCU\n
 $Comp
 L Device:R R7
 U 1 1 6053663D
@@ -899,9 +786,6 @@ F 3 "~" H 6800 1300 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	6800 1150 6800 1050
-Wire Wire Line
-	6800 1050 7850 1050
-Connection ~ 7850 1050
 Wire Wire Line
 	6000 1850 6150 1850
 Wire Wire Line
@@ -1153,7 +1037,7 @@ U 1 1 605C1CCD
 P 5100 7000
 F 0 "C10" H 5215 7046 50  0000 L CNN
 F 1 "C" H 5215 6955 50  0000 L CNN
-F 2 "Capacitor_SMD:C_1206_3216Metric" H 5138 6850 50  0001 C CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 5138 6850 50  0001 C CNN
 F 3 "~" H 5100 7000 50  0001 C CNN
 	1    5100 7000
 	1    0    0    -1  
@@ -1238,7 +1122,7 @@ U 1 1 604D54FA
 P 6350 7000
 F 0 "C15" H 6465 7046 50  0000 L CNN
 F 1 "C" H 6465 6955 50  0000 L CNN
-F 2 "Capacitor_SMD:C_1206_3216Metric" H 6388 6850 50  0001 C CNN
+F 2 "Capacitor_SMD:C_0402_1005Metric" H 6388 6850 50  0001 C CNN
 F 3 "~" H 6350 7000 50  0001 C CNN
 	1    6350 7000
 	1    0    0    -1  
@@ -1255,12 +1139,12 @@ F 3 "" H 6350 7150 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Connector_Generic:Conn_01x04 J?
+L Connector_Generic:Conn_01x04 J13
 U 1 1 604E1052
 P 10500 2050
-F 0 "J?" H 10580 2042 50  0000 L CNN
+F 0 "J13" H 10580 2042 50  0000 L CNN
 F 1 "Conn_01x04" H 10580 1951 50  0000 L CNN
-F 2 "" H 10500 2050 50  0001 C CNN
+F 2 "Connector_PinHeader_1.00mm:PinHeader_1x05_P1.00mm_Vertical" H 10500 2050 50  0001 C CNN
 F 3 "~" H 10500 2050 50  0001 C CNN
 	1    10500 2050
 	1    0    0    -1  
@@ -1269,25 +1153,158 @@ Wire Wire Line
 	9900 1950 10300 1950
 Wire Wire Line
 	9900 2050 10300 2050
-Wire Wire Line
-	9900 2250 10300 2250
 Text Label 9900 1950 0    50   ~ 0
 3V3
 Text Label 9900 2050 0    50   ~ 0
 SWDIO
-Text Label 9900 2250 0    50   ~ 0
-RST
+Wire Wire Line
+	10300 2150 9900 2150
+Wire Wire Line
+	10300 2250 9900 2250
+Text Label 9900 2150 0    50   ~ 0
+SWCLK
 $Comp
-L power:GND #PWR?
-U 1 1 60502F62
-P 9750 2150
-F 0 "#PWR?" H 9750 1900 50  0001 C CNN
-F 1 "GND" H 9755 1977 50  0000 C CNN
-F 2 "" H 9750 2150 50  0001 C CNN
-F 3 "" H 9750 2150 50  0001 C CNN
-	1    9750 2150
+L power:GND #PWR0130
+U 1 1 604FF449
+P 9900 2250
+F 0 "#PWR0130" H 9900 2000 50  0001 C CNN
+F 1 "GND" H 9905 2077 50  0000 C CNN
+F 2 "" H 9900 2250 50  0001 C CNN
+F 3 "" H 9900 2250 50  0001 C CNN
+	1    9900 2250
+	1    0    0    -1  
+$EndComp
+$Comp
+L MCU_ST_STM32F1:STM32F103C8Tx U2
+U 1 1 605109C1
+P 8050 3000
+F 0 "U2" H 8000 1411 50  0000 C CNN
+F 1 "STM32F103C8Tx" H 8000 1320 50  0000 C CNN
+F 2 "Package_QFP:LQFP-48_7x7mm_P0.5mm" H 7450 1600 50  0001 R CNN
+F 3 "http://www.st.com/st-web-ui/static/active/en/resource/technical/document/datasheet/CD00161566.pdf" H 8050 3000 50  0001 C CNN
+	1    8050 3000
+	1    0    0    -1  
+$EndComp
+Text Label 9000 3200 0    50   ~ 0
+CS_1
+Wire Wire Line
+	8650 3200 9000 3200
+Wire Wire Line
+	8650 3300 9000 3300
+Wire Wire Line
+	8650 3400 9000 3400
+Text Label 9000 3300 0    50   ~ 0
+CLK_1
+Text Label 9000 3400 0    50   ~ 0
+MISO_1
+Wire Wire Line
+	8650 2800 9000 2800
+Text Label 8800 2800 0    50   ~ 0
+DC_ENA
+Text Label 7000 4000 0    50   ~ 0
+CS_2
+Text Label 7000 4100 0    50   ~ 0
+CLK_2
+Text Label 7000 4200 0    50   ~ 0
+MISO_2
+Text Label 7000 4300 0    50   ~ 0
+MOSI_2
+Wire Wire Line
+	8650 2900 9000 2900
+Text Label 8800 2900 0    50   ~ 0
+POWER_ENA
+$Comp
+L power:GND #PWR0115
+U 1 1 6027DAFF
+P 7600 4600
+F 0 "#PWR0115" H 7600 4350 50  0001 C CNN
+F 1 "GND" H 7605 4427 50  0000 C CNN
+F 2 "" H 7600 4600 50  0001 C CNN
+F 3 "" H 7600 4600 50  0001 C CNN
+	1    7600 4600
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	9750 2150 10300 2150
+	6800 1050 7950 1050
+Wire Wire Line
+	7950 1500 8050 1500
+Connection ~ 8050 1500
+Wire Wire Line
+	8050 1500 8150 1500
+Connection ~ 8150 1500
+Wire Wire Line
+	8150 1500 8250 1500
+Wire Wire Line
+	7950 1500 7950 1050
+Connection ~ 7950 1500
+Connection ~ 7950 1050
+Wire Wire Line
+	7950 1050 8450 1050
+Wire Wire Line
+	7850 1500 7950 1500
+Wire Wire Line
+	7850 4500 7950 4500
+Connection ~ 7950 4500
+Wire Wire Line
+	7950 4500 8050 4500
+Connection ~ 8050 4500
+Wire Wire Line
+	8050 4500 8150 4500
+Wire Wire Line
+	7600 4600 7600 4500
+Wire Wire Line
+	7600 4500 7850 4500
+Connection ~ 7850 4500
+Wire Wire Line
+	8650 3500 9000 3500
+Text Label 9000 3500 0    50   ~ 0
+MOSI_1
+Wire Wire Line
+	6850 4000 7350 4000
+Wire Wire Line
+	6850 4100 7350 4100
+Wire Wire Line
+	6850 4200 7350 4200
+Wire Wire Line
+	6850 4300 7350 4300
+Wire Wire Line
+	8650 4200 9050 4200
+Wire Wire Line
+	8650 4100 9050 4100
+Text Label 9050 4100 0    50   ~ 0
+SWDIO
+Text Label 9050 4200 0    50   ~ 0
+SWCLK
+$Comp
+L power:GND #PWR0131
+U 1 1 60661221
+P 7200 1900
+F 0 "#PWR0131" H 7200 1650 50  0001 C CNN
+F 1 "GND" H 7205 1727 50  0000 C CNN
+F 2 "" H 7200 1900 50  0001 C CNN
+F 3 "" H 7200 1900 50  0001 C CNN
+	1    7200 1900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7200 1900 7350 1900
+$Comp
+L LTC7001IMSE#PBF:LTC7001IMSE#PBF IC1
+U 1 1 606BD5A8
+P 2500 2200
+F 0 "IC1" H 3100 2465 50  0000 C CNN
+F 1 "LTC7001IMSE#PBF" H 3100 2374 50  0000 C CNN
+F 2 "LTC7001:SOP50P490X110-11N" H 3550 2300 50  0001 L CNN
+F 3 "http://www.linear.com/docs/58157" H 3550 2200 50  0001 L CNN
+F 4 "High-Side Gate Driver IC Non-Inverting 10-MSOP" H 3550 2100 50  0001 L CNN "Description"
+F 5 "1.1" H 3550 2000 50  0001 L CNN "Height"
+F 6 "Linear Technology" H 3550 1900 50  0001 L CNN "Manufacturer_Name"
+F 7 "LTC7001IMSE#PBF" H 3550 1800 50  0001 L CNN "Manufacturer_Part_Number"
+F 8 "584-LTC7001IMSEPBF" H 3550 1700 50  0001 L CNN "Mouser Part Number"
+F 9 "https://www.mouser.co.uk/ProductDetail/Analog-Devices-Linear-Technology/LTC7001IMSEPBF?qs=BZBei1rCqCCuiLQ%252BeMjtcQ%3D%3D" H 3550 1600 50  0001 L CNN "Mouser Price/Stock"
+F 10 "LTC7001IMSE#PBF" H 3550 1500 50  0001 L CNN "Arrow Part Number"
+F 11 "https://www.arrow.com/en/products/ltc7001imsepbf/linear-technology" H 3550 1400 50  0001 L CNN "Arrow Price/Stock"
+	1    2500 2200
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
