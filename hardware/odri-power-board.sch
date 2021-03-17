@@ -1307,4 +1307,32 @@ F 11 "https://www.arrow.com/en/products/ltc7001imsepbf/linear-technology" H 3550
 	1    2500 2200
 	1    0    0    -1  
 $EndComp
+$Comp
+L LED:WS2812B D2
+U 1 1 605416CB
+P 10100 3100
+F 0 "D2" H 10444 3146 50  0000 L CNN
+F 1 "WS2812B" H 10444 3055 50  0000 L CNN
+F 2 "LED_SMD:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm" H 10150 2800 50  0001 L TNN
+F 3 "https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf" H 10200 2725 50  0001 L TNN
+	1    10100 3100
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0132
+U 1 1 6054615B
+P 10100 3400
+F 0 "#PWR0132" H 10100 3150 50  0001 C CNN
+F 1 "GND" H 10105 3227 50  0000 C CNN
+F 2 "" H 10100 3400 50  0001 C CNN
+F 3 "" H 10100 3400 50  0001 C CNN
+	1    10100 3400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10100 2800 10100 2700
+Wire Wire Line
+	10100 2700 9850 2700
+Text Label 9850 2700 0    50   ~ 0
+3V3
 $EndSCHEMATC
