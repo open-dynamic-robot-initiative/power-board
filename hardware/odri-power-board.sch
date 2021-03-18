@@ -732,7 +732,7 @@ Text Notes 900  7350 0    50   ~ 0
 Power ON and latch
 Text Notes 5850 7550 0    50   ~ 0
 DC 5V to 3.3V 250mA
-Text Notes 4000 5850 0    50   ~ 0
+Text Notes 3250 5850 0    50   ~ 0
 Current and Voltage mesurment
 Text Label 1350 2500 0    50   ~ 0
 POWER_ENA
@@ -1144,7 +1144,7 @@ U 1 1 604E1052
 P 10500 2050
 F 0 "J13" H 10580 2042 50  0000 L CNN
 F 1 "Conn_01x04" H 10580 1951 50  0000 L CNN
-F 2 "Connector_PinHeader_1.00mm:PinHeader_1x05_P1.00mm_Vertical" H 10500 2050 50  0001 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical" H 10500 2050 50  0001 C CNN
 F 3 "~" H 10500 2050 50  0001 C CNN
 	1    10500 2050
 	1    0    0    -1  
