@@ -403,6 +403,7 @@ F 0 "R8" H 3220 6946 50  0000 L CNN
 F 1 "470k" H 3220 6855 50  0000 L CNN
 F 2 "Resistor_SMD:R_0402_1005Metric" V 3080 6900 50  0001 C CNN
 F 3 "~" H 3150 6900 50  0001 C CNN
+F 4 "https://www.mouser.fr/ProductDetail/71-RCG0402470KJNED" H 3150 6900 50  0001 C CNN "Link"
 	1    3150 6900
 	1    0    0    -1  
 $EndComp
@@ -426,6 +427,7 @@ F 0 "R7" H 1970 6396 50  0000 L CNN
 F 1 "3.3M" H 1970 6305 50  0000 L CNN
 F 2 "Resistor_SMD:R_0402_1005Metric" V 1830 6350 50  0001 C CNN
 F 3 "~" H 1900 6350 50  0001 C CNN
+F 4 "https://www.mouser.fr/ProductDetail/603-AC0402FR-073M3L" H 1900 6350 50  0001 C CNN "Link"
 	1    1900 6350
 	1    0    0    -1  
 $EndComp
@@ -507,6 +509,7 @@ F 0 "D3" H 1600 6833 50  0000 C CNN
 F 1 "D" H 1600 6924 50  0000 C CNN
 F 2 "Diode_SMD:D_0402_1005Metric" H 1600 7050 50  0001 C CNN
 F 3 "~" H 1600 7050 50  0001 C CNN
+F 4 "https://www.mouser.fr/ProductDetail/Comchip-Technology/CDBQR70-HF?qs=%2Fha2pyFaduhnT45lMexlaXS0r8%252BBpDFJBV2A8ESBB%2FE5496CUPR4Iw%3D%3D" H 1600 7050 50  0001 C CNN "Link"
 	1    1600 7050
 	-1   0    0    1   
 $EndComp
@@ -531,6 +534,7 @@ F 0 "F1" H 1960 4896 50  0000 L CNN
 F 1 "0.16A" H 1960 4805 50  0000 L CNN
 F 2 "Fuse:Fuse_1206_3216Metric" V 1830 4850 50  0001 C CNN
 F 3 "~" H 1900 4850 50  0001 C CNN
+F 4 "https://www.mouser.fr/ProductDetail/693-3413.0008.22" H 1900 4850 50  0001 C CNN "Link"
 	1    1900 4850
 	1    0    0    -1  
 $EndComp
@@ -541,7 +545,7 @@ L Device:C C6
 U 1 1 604019BE
 P 2500 5650
 F 0 "C6" H 2615 5696 50  0000 L CNN
-F 1 "C" H 2615 5605 50  0000 L CNN
+F 1 "100n" H 2615 5605 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0402_1005Metric" H 2538 5500 50  0001 C CNN
 F 3 "~" H 2500 5650 50  0001 C CNN
 	1    2500 5650
@@ -624,6 +628,7 @@ F 0 "C4" H 4215 2296 50  0000 L CNN
 F 1 "4.7uF" H 4215 2205 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0805_2012Metric" H 4138 2100 50  0001 C CNN
 F 3 "~" H 4100 2250 50  0001 C CNN
+F 4 "https://www.mouser.fr/ProductDetail/81-GRM21BR61H475KE1L" H 4100 2250 50  0001 C CNN "Link"
 	1    4100 2250
 	1    0    0    -1  
 $EndComp
@@ -654,6 +659,7 @@ F 0 "C5" H 4365 2796 50  0000 L CNN
 F 1 "0.47uF" H 4365 2705 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0805_2012Metric" H 4288 2600 50  0001 C CNN
 F 3 "~" H 4250 2750 50  0001 C CNN
+F 4 "https://www.mouser.fr/ProductDetail/187-CL21B474KBFNNNE" H 4250 2750 50  0001 C CNN "Link"
 	1    4250 2750
 	1    0    0    -1  
 $EndComp
@@ -665,6 +671,7 @@ F 0 "R2" V 4100 2500 50  0000 C CNN
 F 1 "100k" V 4200 2500 50  0000 C CNN
 F 2 "Resistor_SMD:R_0402_1005Metric" V 3880 2500 50  0001 C CNN
 F 3 "~" H 3950 2500 50  0001 C CNN
+F 4 "https://www.mouser.fr/ProductDetail/603-AC0402FR-13100KL" H 3950 2500 50  0001 C CNN "Link"
 	1    3950 2500
 	0    1    1    0   
 $EndComp
@@ -682,6 +689,7 @@ F 0 "R4" H 4180 3004 50  0000 R CNN
 F 1 "10" H 4180 3095 50  0000 R CNN
 F 2 "Resistor_SMD:R_0402_1005Metric" V 4180 3050 50  0001 C CNN
 F 3 "~" H 4250 3050 50  0001 C CNN
+F 4 "https://www.mouser.fr/ProductDetail/71-CRCW040210R0FKEE" H 4250 3050 50  0001 C CNN "Link"
 	1    4250 3050
 	-1   0    0    1   
 $EndComp
@@ -754,6 +762,7 @@ F 0 "R1" H 6730 1254 50  0000 R CNN
 F 1 "100k" H 6730 1345 50  0000 R CNN
 F 2 "Resistor_SMD:R_0402_1005Metric" V 6730 1300 50  0001 C CNN
 F 3 "~" H 6800 1300 50  0001 C CNN
+F 4 "https://www.mouser.fr/ProductDetail/603-AC0402FR-13100KL" H 6800 1300 50  0001 C CNN "Link"
 	1    6800 1300
 	-1   0    0    1   
 $EndComp
@@ -985,6 +994,7 @@ F 0 "C16" H 5215 7046 50  0000 L CNN
 F 1 "22uF" H 5215 6955 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0805_2012Metric" H 5138 6850 50  0001 C CNN
 F 3 "https://fr.rs-online.com/web/p/condensateurs-ceramique-multicouches/8851768/" H 5100 7000 50  0001 C CNN
+F 4 "https://www.mouser.fr/ProductDetail/Samsung-Electro-Mechanics/CL21A226MPCLRNC?qs=sGAEpiMZZMsh%252B1woXyUXj%252BV5GOLijFH8YiE3O1ydecM%3D" H 5100 7000 50  0001 C CNN "Link"
 	1    5100 7000
 	1    0    0    -1  
 $EndComp
@@ -1476,6 +1486,7 @@ F 0 "C17" H 6465 7046 50  0000 L CNN
 F 1 "4.7uF" H 6465 6955 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0805_2012Metric" H 6388 6850 50  0001 C CNN
 F 3 "~" H 6350 7000 50  0001 C CNN
+F 4 "https://www.mouser.fr/ProductDetail/81-GRM21BR61H475KE1L" H 6350 7000 50  0001 C CNN "Link"
 	1    6350 7000
 	1    0    0    -1  
 $EndComp
