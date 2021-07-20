@@ -133,11 +133,10 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   uint16_t vbus=0;
   int16_t vshunt=0;
-  //float power= 0.0f;
   union {
     float asFloat;
     unsigned char asBytes[4];
-  } energy={.asFloat=1.234f};
+  } energy={.asFloat=0.0f};
 
   uint16_t time = __HAL_TIM_GET_COUNTER(&htim3);
   uint16_t time_diff = 0;
@@ -149,7 +148,6 @@ int main(void)
 
   int i;
   uint8_t cpt=0;
-  //float power = .0f;
   last_sample_time=__HAL_TIM_GET_COUNTER(&htim3);
 
   //Prepare the First SPI communication. Next ones will be triggered by the DMA IRQ
@@ -162,7 +160,6 @@ int main(void)
 	  time_diff = __HAL_TIM_GET_COUNTER(&htim3) - time ;
 	  if (time_diff >= 1000)
 	  {
-		  //HAL_GPIO_TogglePin(GPIOA, GPIO_PIN_4); //CS for SPI1
 		  time = __HAL_TIM_GET_COUNTER(&htim3);
 		  red = 0xff * (red==0);
 		  bitbangledRGB(red,0,0);
@@ -188,14 +185,11 @@ int main(void)
 	  sensor_frame[11] = crc&0xff;
 	  if (HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_4)) //No SPI communication running, lets copy the buffers
 	  {
-
-		  //HAL_GPIO_TogglePin(GPIOA, GPIO_PIN_3); //debug todo
 		  for(i=1;i<12;i++)
 		  {
 			  TX_buffer_SPI1[i] = sensor_frame[i];
 			  command_frame[i] = RX_buffer_SPI1[i];
 		  }
-		  //HAL_GPIO_TogglePin(GPIOA, GPIO_PIN_3); //debug todo
 	  }
 	  //HAL_Delay(1);
 
@@ -439,15 +433,12 @@ static void MX_GPIO_Init(void)
 /* USER CODE BEGIN 4 */
 void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
 {
-	//HAL_GPIO_TogglePin(GPIOA, GPIO_PIN_3); //debug todo
 	if (GPIO_Pin == SPI1_CS_Pin)
 	{
 		if (HAL_GPIO_ReadPin(SPI1_CS_GPIO_Port,SPI1_CS_Pin) == GPIO_PIN_SET)
 		{
-			HAL_GPIO_TogglePin(GPIOA, GPIO_PIN_3);
 			HAL_SPI_Abort(&hspi1);
 			HAL_SPI_TransmitReceive_DMA(&hspi1, TX_buffer_SPI1, RX_buffer_SPI1, 12);
-			HAL_GPIO_TogglePin(GPIOA, GPIO_PIN_3); //debug todo
 		}
 	}
 }
@@ -457,7 +448,6 @@ void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
 
 void HAL_SPI_TxRxCpltCallback(SPI_HandleTypeDef *hspi)
 {
-	//HAL_GPIO_TogglePin(GPIOA, GPIO_PIN_3);
 	if (hspi == &hspi1)
 	{
 
