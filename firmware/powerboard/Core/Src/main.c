@@ -165,7 +165,7 @@ int main(void)
 		  bitbangledRGB(red,0,0);
 	  }
 	  sample_time = __HAL_TIM_GET_COUNTER(&htim3); //time in microseconds
-	  dt = last_sample_time - sample_time; //(all in uint16, so no overflow problems here)
+	  dt = sample_time - last_sample_time; //(all in uint16, so no overflow problems here)
 	  last_sample_time = sample_time;
 	  vbus = read_register16_INA239(hspi2,REG_INA_VBUS);
 	  vshunt = -read_register16_INA239(hspi2,REG_INA_VSHUNT);
