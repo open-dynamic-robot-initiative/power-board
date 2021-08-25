@@ -1,7 +1,7 @@
 # Power-board
 Power Management and distribution board for Open Dynamic Robot Initiative Robots
 
-## Main feature
+## Main features
 
 - 40A 32V DC load switching
 - Inrush current limiting
@@ -54,4 +54,7 @@ todo
 Not implemented yet
 
 ## Flashing firmware
-todo
+####  Compiling firmware
+Install STM32cubeIDE from here: https://www.st.com/en/development-tools/stm32cubeide.html#get-software
+Clone this repository 
+Open STM32cubeIDE and open the project via `File -> Open project via file system ` select the folder `firmware/powerboard/` from this repo. Click on Finish.
