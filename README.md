@@ -1,7 +1,7 @@
 # Power-board
 Power Management and distribution board for Open Dynamic Robot Initiative Robots
 
-##Main feature
+## Main feature
 
 - 40A 32V DC load switching
 - Inrush current limiting
@@ -9,9 +9,9 @@ Power Management and distribution board for Open Dynamic Robot Initiative Robots
 - Under voltage, Over current shutdown with settable thresholds
 - Telemetry, load switching via SPI
 
-##Wiring 
+## Wiring 
 
-####J1 - Programming port
+#### J1 - Programming port
 Serial Wire Debug (SWD)
 
 | 1 | 2 | 3 | 4 |
