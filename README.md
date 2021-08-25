@@ -55,6 +55,8 @@ Not implemented yet
 
 ## Flashing firmware
 ####  Compiling firmware
-Install STM32cubeIDE from here: https://www.st.com/en/development-tools/stm32cubeide.html#get-software
-Clone this repository 
-Open STM32cubeIDE and open the project via `File -> Open project via file system ` select the folder `firmware/powerboard/` from this repo. Click on Finish.
+1- Install STM32cubeIDE from here: https://www.st.com/en/development-tools/stm32cubeide.html#get-software
+
+2- Clone this repository 
+
+3- Open STM32cubeIDE and open the project via `File -> Open project via file system ` select the folder `firmware/powerboard/` from this repo. Click on Finish.
