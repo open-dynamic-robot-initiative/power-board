@@ -133,6 +133,19 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   uint16_t vbus=0;
   int16_t vshunt=0;
+
+  int16_t  vshuntValueThreshold = 25 * 800; // 25A * 800  ---  with 800=(4e-3/5e-6)=4mOhm / (5uV/LSB)  ---   40A is the maximum
+  uint16_t vbusValueThreshold   = 0; //TODO
+  int32_t vshuntTimeThreshold = 100*1000; //100ms
+  int32_t vbusTimeThreshold   = 100*1000; //100ms
+
+  int32_t periodVshuntAboveThreshold=0;
+  int32_t periodVbusAboveThreshold=0;
+
+
+  char errorOverCurrent = 0;
+  char errorUnderVoltage = 0;
+
   union {
     float asFloat;
     unsigned char asBytes[4];
@@ -153,12 +166,12 @@ int main(void)
   //Prepare the First SPI communication. Next ones will be triggered by the DMA IRQ
   HAL_SPI_TransmitReceive_DMA(&hspi1, TX_buffer_SPI1, RX_buffer_SPI1, 12);
 
-  while (1) //This loop should never be executed in less that 65ms for the energy integration to stay valid
+  while (1) //This loop should never be executed in more that 65ms for the energy integration to stay valid
   {
 	  cpt++;
 	  //HAL_SPI_TransmitReceive_DMA(&hspi1, TX_buffer_SPI1, RX_buffer_SPI1, 12);
 	  time_diff = __HAL_TIM_GET_COUNTER(&htim3) - time ;
-	  if (time_diff >= 1000)
+	  if (time_diff >= 1000) //Blink LED in RED
 	  {
 		  time = __HAL_TIM_GET_COUNTER(&htim3);
 		  red = 0xff * (red==0);
@@ -170,6 +183,48 @@ int main(void)
 	  vbus = read_register16_INA239(hspi2,REG_INA_VBUS);
 	  vshunt = -read_register16_INA239(hspi2,REG_INA_VSHUNT);
 	  //power = read_register24_INA239(hspi2,REG_INA_POWER);
+
+	  //Over current detection
+	  if (vshunt > vshuntValueThreshold || vshunt < -vshuntValueThreshold)
+	  {
+		  periodVshuntAboveThreshold += dt;
+	  }
+	  else
+	  {
+		  if (periodVshuntAboveThreshold>dt)
+		  {
+			  periodVshuntAboveThreshold -= dt;
+		  }
+		  else
+		  {
+			  periodVshuntAboveThreshold = 0;
+		  }
+	  }
+	  errorOverCurrent = (periodVshuntAboveThreshold > vshuntTimeThreshold);
+
+	  //Under voltage detection
+	  if (vbus < vbusValueThreshold)
+	  {
+		  periodVbusAboveThreshold += dt;
+	  }
+	  else
+	  {
+		  if (periodVbusAboveThreshold>dt)
+		  {
+			  periodVbusAboveThreshold -= dt;
+		  }
+		  else
+		  {
+			  periodVbusAboveThreshold = 0;
+		  }
+	  }
+	  errorUnderVoltage = (periodVbusAboveThreshold > vbusTimeThreshold);
+
+
+
+
+
+
 	  energy.asFloat = energy.asFloat + 1e-6 * dt*vbus*vshunt; //todo manage the units
 	  sensor_frame[1] = cpt;
 	  sensor_frame[2] = (vbus>>8)&0xff;
